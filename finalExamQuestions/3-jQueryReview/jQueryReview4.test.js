@@ -23,6 +23,7 @@ let $ = createSnippetWithJQuery(`
 
 const fixTheTypo = () => {
   // Solution Code Here...
+  $('li').eq(2).text('Pear');
 };
 
 ///////////////////////////////////////////////////
