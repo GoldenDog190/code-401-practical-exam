@@ -52,7 +52,13 @@ let $ = createSnippetWithJQuery(`
 
 const templatingWithMustache = () => {
   // Solution code here...
-}
+  const templateArr = [];
+  characters.forEach(character => {
+    let $template = $('#template').html();
+    templateArr.push(Mustache.render($template, character));
+  })
+  return templateArr;
+};
 
 ///////////////////////////////////////////////////
 // TESTS
