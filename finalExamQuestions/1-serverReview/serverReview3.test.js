@@ -19,6 +19,22 @@ const createServer = () => {
   const app = express();
 
   // Solution code here...
+  app.get('/hello', greeting);
+  app.get('/aboutme', aboutMe);
+  app.get('/favoritefoods', favoriteFood);
+
+  function greeting(request, response) {
+    response.send('Hi, nice to meet you!');
+  }
+
+  function aboutMe(request, response) {
+    response.send('I am Amelia Waggoner, and I am a software engineer from the Pacific Northwest.');
+  }
+
+  function favoriteFood(request, response) {
+   let arrFood = ['sushi', 'pizza', 'mac & cheese']; 
+   response.send(arrFood);
+  }
 
   return app;
 };
