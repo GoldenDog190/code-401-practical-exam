@@ -25,6 +25,7 @@ let $ = createSnippetWithJQuery(`
 
 const updateFavoriteFood = () => {
   // Solution code here ...
+  $('li[data-favoritefood="favoritefood"]').text('cherries');
 }
 
 ///////////////////////////////////////////////////
